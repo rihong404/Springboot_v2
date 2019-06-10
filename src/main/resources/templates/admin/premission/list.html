@@ -149,7 +149,8 @@
 <script th:src="@{/static/admin/assets/js/layer/layer.js}" type="text/javascript"></script>
 <!-- 遮罩层 -->
 <script th:src="@{/static/admin/assets/js/blockUI/jquery.blockUI.js}" type="text/javascript"></script>
-
+<!-- 右边高度控制 -->
+<script type="text/javascript" th:src="@{/static/admin/assets/js/right_hight.js}"></script>
 
 <script type="text/javascript">
 
@@ -183,6 +184,19 @@ var exportUrl=window.rootPath+"/PremissionController/export";
 			{
 			    field: 'url',
 			    title: '权限URL'
+			},
+			{
+			    field: 'isBlank',
+			    title: '是否跳转',
+			    formatter: function (value, row, index) {
+			        var actions = [];
+			        if(value==0){
+			        	 actions.push('<span class="label label-primary">否</span>');
+			        }else if(value==1){
+			        	 actions.push('<span class="label label-danger">是</span>');
+			        }
+			      	return actions.join('');			    
+				 }
 			},
 			{
 			    field: 'perms',

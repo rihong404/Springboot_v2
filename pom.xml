@@ -150,7 +150,7 @@
 		<dependency>
 			<groupId>cn.hutool</groupId>
 			<artifactId>hutool-all</artifactId>
-			<version>4.1.10</version>
+			<version>4.1.12</version>
 		</dependency>
 		<!-- google验证码 -->
 		<dependency>
@@ -164,7 +164,12 @@
 		    <artifactId>velocity</artifactId>
 		    <version>1.7</version>
 		</dependency>
-		
+		<!-- websocket -->
+		 <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-websocket</artifactId>
+		</dependency>
+		<!-- 配置文件读取 -->
 		<dependency>
 			<groupId>commons-configuration</groupId>
 			<artifactId>commons-configuration</artifactId>
@@ -176,6 +181,15 @@
 			<artifactId>spring-boot-configuration-processor</artifactId>
 			<optional>true</optional>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/javax.mail/mail -->
+		<dependency>
+		    <groupId>javax.mail</groupId>
+		    <artifactId>mail</artifactId>
+		    <version>1.4.7</version>
+		</dependency>
+		
+		
 	</dependencies>
 
 
